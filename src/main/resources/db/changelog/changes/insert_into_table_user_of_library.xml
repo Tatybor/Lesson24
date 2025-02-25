@@ -1,0 +1,20 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="insert_into_table_user_of_library" author="Borovik">
+        <sql>
+            insert into user_of_library(email, password, role)
+            values
+            (dim@gmail.com,$2a$10$XFOiLduwF5ZWwLgzU8F58u5Hru04vDfiffOryetTt0dWoTDDK9.HW, USER),
+            (olga@mail.ru,$2a$10$RbFG2SG.uyWUwoujK61raO5g2.jhNIUOpXrvKFpt9Rtbx/NaREo6S, USER),
+            (vlad@gmail.com,$2a$10$ef0nHFmQnXBBZxjzYox/QOgFumy5RwjGaIIy.nrmWrJbhhzgPwfPu, ADMIN);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
+
+
+
+

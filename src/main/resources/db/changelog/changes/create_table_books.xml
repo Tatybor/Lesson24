@@ -1,0 +1,17 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="create_table_book" author="Borovik">
+        <sql>
+            create table if not exists book(
+            id bigserial primary key,
+            name varchar not null,
+            genre_id bigint not null,
+            foreign key (genre_id) references genre (id)
+            )
+        </sql>
+    </changeSet>
+</databaseChangeLog>

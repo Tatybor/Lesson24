@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+<changeSet id="create_table_user_of_library" author="Borovik">
+    <preConditions onFail="MARK_RAN">
+        <not>
+        <tableExists tableName="user_of_library"/>
+        </not>
+    </preConditions>
+    <createTable tableName="user_of_library">
+        <column name = "id" type = "bigserial" autoIncrement="true">
+                <constraints primaryKey="true"></constraints>
+        </column>
+        <column name = "email" type = "varchar (50)">
+            <constraints nullable="false"></constraints>
+        </column>
+        <column name = "password" type = "varchar(300)">
+            <constraints nullable="false"></constraints>
+        </column>
+    <column name = "role" type = "varchar(20)">
+        <constraints nullable="false"></constraints>
+    </column>
+
+    </createTable>
+</changeSet>
+    </databaseChangeLog>
