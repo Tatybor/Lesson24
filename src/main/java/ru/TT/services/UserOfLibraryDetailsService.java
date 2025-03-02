@@ -1,4 +1,4 @@
-package ru.T.services;
+package ru.TT.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ru.T.entity.UserOfLibrary;
-import ru.T.repository.UserOfLibraryRepository;
+import ru.TT.entity.UserOfLibrary;
+import ru.TT.repository.UserOfLibraryRepository;
 
 @Service
 @RequiredArgsConstructor

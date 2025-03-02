@@ -1,4 +1,4 @@
-package ru.T.DTO;
+package ru.TT.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

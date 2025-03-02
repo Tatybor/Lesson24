@@ -1,4 +1,4 @@
-package ru.T.DTO;
+package ru.TT.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

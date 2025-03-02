@@ -1,6 +1,6 @@
-package ru.T.services;
+package ru.TT.services;
 
-import ru.T.DTO.UserOfLibraryDTO;
+import ru.TT.DTO.UserOfLibraryDTO;
 
 public interface UserOfLibraryService {
     public UserOfLibraryDTO getUserOfLibraryByEmail (String email);

@@ -1,4 +1,4 @@
-package ru.T.controller;
+package ru.TT.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -9,8 +9,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import ru.T.entity.Author;
-import ru.T.services.AuthorServiceImpl;
+import ru.TT.entity.Author;
+import ru.TT.services.AuthorServiceImpl;
 
 import java.util.HashMap;
 import java.util.Map;

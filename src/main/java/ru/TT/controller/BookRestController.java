@@ -1,4 +1,4 @@
-package ru.T.controller;
+package ru.TT.controller;
 
 
 import jakarta.validation.Valid;
@@ -7,9 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import ru.T.DTO.BookDTO;
-import ru.T.entity.Book;
-import ru.T.services.BookServiceImpl;
+import ru.TT.DTO.BookDTO;
+import ru.TT.entity.Book;
+import ru.TT.services.BookServiceImpl;
 
 import java.util.HashMap;
 import java.util.Map;

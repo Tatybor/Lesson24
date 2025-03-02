@@ -1,4 +1,4 @@
-package ru.T.security;
+package ru.TT.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

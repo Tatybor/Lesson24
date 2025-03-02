@@ -1,4 +1,4 @@
-package ru.T.services;
+package ru.TT.services;
 
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
@@ -8,10 +8,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import ru.T.DTO.AuthorDTO;
-import ru.T.DTO.BookDTO;
-import ru.T.entity.Author;
-import ru.T.repository.AuthorRepository;
+import ru.TT.DTO.AuthorDTO;
+import ru.TT.DTO.BookDTO;
+import ru.TT.entity.Author;
+import ru.TT.repository.AuthorRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -41,6 +41,9 @@ public class AuthorServiceImpl implements AuthorService {
         log.info("нашли автора по id");
         return convertAuthorToDTO(author);
     }
+
+
+
 
     private AuthorDTO convertAuthorToDTO(Author author) {
 

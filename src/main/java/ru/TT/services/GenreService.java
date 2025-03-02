@@ -1,6 +1,6 @@
-package ru.T.services;
+package ru.TT.services;
 
-import ru.T.DTO.GenreDTO;
+import ru.TT.DTO.GenreDTO;
 
 public interface GenreService {
     GenreDTO getGenreById (Long id);
