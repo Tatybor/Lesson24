@@ -14,6 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class AuthorRestControllerTest {
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -26,13 +27,21 @@ class AuthorRestControllerTest {
     }
 
     @Test
-    @WithMockUser(username="admin@gmail.co", roles="ADMIN")
-    void addNewAuthor() throws Exception{
+    @WithMockUser(username="admin@gmail.com", roles="ADMIN")
+    void addNewAuthor_Successful() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders.post("/authors")
                 .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"name\": \"Olga\", \"surname\": \"Primachenko\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath ("$.name").value("Olga"))
                 .andExpect(jsonPath("$.surname").value("Primachenko"));
+    }
+
+    @Test
+    void addNewAuthor_UnAuthorized() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.post("/authors")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{\"name\": \"Another\", \"surname\": \"Author\"}"))
+                .andExpect(status().isUnauthorized());
     }
     }
