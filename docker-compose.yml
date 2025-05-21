@@ -1,0 +1,40 @@
+services:
+ app:
+  container_name: lesson24
+  image: lesson24:latest
+  build:
+   context: .
+   dockerfile: dockerfile
+  ports:
+  - "8083:8080"
+  depends_on:
+  - db
+  environment:
+   SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/library-project
+   SPRING_DATASOURCE_USERNAME: postgres
+   SPRING_DATASOURCE_PASSWORD: mazinlovair
+   SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+  networks:
+  - library-net
+
+ db:
+  container_name: postgres-db
+  image: postgres:15
+  restart: always
+  environment:
+   POSTGRES_DB: library-project
+   POSTGRES_USER: postgres
+   POSTGRES_PASSWORD: 11111
+  volumes:
+  - pgdata:/var/lib/postgresql/data
+  ports:
+    - "5434:5432"
+  networks:
+    - library-net
+
+volumes:
+ pgdata:
+
+networks:
+ library-net:
+  driver: bridge
